@@ -1,0 +1,24 @@
+# ignore node modules
+node_modules
+
+
+# ignore build related folders and files
+build
+
+# module responsible for hot reloading
+babel-helper-replace-supers
+
+
+# Package-lock.json
+package-lock.json
+
+
+#npm debug log
+npm-debug.log
+
+
+#debug log
+debug.log
+
+#db path
+db

@@ -1,0 +1,43 @@
+{
+  "name": "react_crud_node_mongodb",
+  "version": "1.0.0",
+  "description": "React CRUD using node mongodb",
+  "main": "server.js",
+  "scripts": {
+    "start": "webpack-dev-server --port 5000 --host localhost --hot",
+    "test": "react"
+  },
+  "keywords": [
+    "React"
+  ],
+  "devServer": {
+    "address": "localhost",
+    "port": 3000
+  },
+  "author": "Goutham KD",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.2",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.23.0",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.3"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "mongoose": "^4.10.2",
+    "morgan": "^1.8.2",
+    "axios": "^0.16.2",
+    "babel-preset-stage-1": "^6.22.0",
+    "bootstrap": "^3.3.7",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-redux": "^4.4.6",
+    "react-router": "^4.1.1",
+    "redux": "^3.6.0",
+    "redux-promise": "^0.5.3",
+    "youtube-api-search": "0.0.5"
+  }
+}
