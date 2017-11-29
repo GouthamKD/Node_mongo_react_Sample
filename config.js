@@ -5,5 +5,6 @@ var db =
         else { console.log('Connected to ' + db, ' + ', response); }
     });
 
+console.log('I am from MOngo!!');
 
 module.exports = db;  

@@ -79,17 +79,17 @@ app.post("/api/savedata", function (req, res) {
 })
 
 // call by default index.html page  
-app.get("*", function (req, res) {
-    res.sendFile(srcpath + '/index.html');
-    console.log('Already loaded index file!!');
-})
+// app.get("*", function (req, res) {
+//     res.sendFile(srcpath + '/index.html');
+//     console.log('Already loaded index file!!');
+// })
 
 //server stat on given port  
-app.listen(port, function (err,res) {
-    if(err){
-        console.log('Something went wrong while opening port!' +port);
-    return;    
-}
-console.log("server started on port" + port);
-    
+app.listen(port, function (err, res) {
+    if (err) {
+        console.log('Something went wrong while opening port!' + port);
+        return;
+    }
+    console.log("server started on port" + port);
+
 })  
