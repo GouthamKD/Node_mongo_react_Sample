@@ -1,20 +1,7 @@
-// import React from 'react';
-
-// class App extends React.Component {
-//   render() {
-//     return (
-//       <div>Hello Goutham , Welcome to React!!!!!</div>
-//     );
-//   }
-// }
-
-// export default App;
-
+//ES6 coding standards followed below...
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-//var StudentAll = React.createClass({
 
 class App extends React.Component {
 
@@ -42,7 +29,8 @@ class App extends React.Component {
       ContentType: 'application/json',
       success: function (data) {
         this.setState({ data1: data });
-        if (this.data.legth === null) {
+        console.log('data is ', data);
+        if (data.length === 0) {
           alert('No data available!!!')
         }
 
@@ -59,7 +47,7 @@ class App extends React.Component {
       'id': id
     };
     $.ajax({
-      url: "/api/Removedata/",
+      url: "http://localhost:7777/api/Removedata/",
       dataType: 'json',
       type: 'POST',
       data: studentDelete,
@@ -86,10 +74,11 @@ class App extends React.Component {
 
     var Url = "";
     if (this.state.Buttontxt == "Save") {
-      Url = "/api/savedata";
+
+      Url = "http://localhost:7777/api/savedata";
     }
     else {
-      Url = "/api/Updatedata";
+      Url = "http://localhost:7777/api/Updatedata";
     }
     var studentdata = {
       'name': this.state.name,
@@ -168,7 +157,14 @@ class App extends React.Component {
           <div className="col-sm-12 col-md-12 " style={{ marginTop: '50px', marginLeft: '300px' }} >
 
             <table className="table-bordered"><tbody>
-              <tr><th><b>S.No</b></th><th><b>NAME</b></th><th><b>ADDRESS</b></th><th><b>EMAIL</b></th><th><b>CONTACT</b></th><th><b>Edit</b></th><th><b>Delete</b></th></tr>
+              <tr><th><b>S.No</b></th>
+                <th><b>NAME</b></th>
+                <th><b>ADDRESS</b></th>
+                <th><b>EMAIL</b></th>
+                <th><b>CONTACT</b></th>
+                <th><b>Edit</b></th>
+                <th><b>Delete</b></th>
+              </tr>
               {this.state.data1.map((item, index) => (
                 <tr key={index}>
                   <td>{index + 1}</td>
